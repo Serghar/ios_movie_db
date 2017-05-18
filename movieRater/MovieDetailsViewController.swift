@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MovieDetailsViewController: UIViewController {
    
@@ -30,14 +31,12 @@ class MovieDetailsViewController: UIViewController {
     private func GetPosterImage(ForUrl str: String?) {
         if(str != nil) {
             let base = "https://image.tmdb.org/t/p/w500"
-            let session = URLSession.shared
-            let url = URL(string: (base + str!))
-            let request = session.dataTask(with: url!, completionHandler: { data, response, error in
+            Alamofire.request((base + str!)).responseData(completionHandler: {
+                data in
                 DispatchQueue.main.async {
-                    self.movieImage.image = UIImage(data: data!)
+                    self.movieImage.image = UIImage(data: data.value!)
                 }
             })
-            request.resume()
         }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -54,25 +55,15 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     private func SearchMovieDb(ForTitle str: String) {
         let base = "http://api.themoviedb.org/3/search/movie?api_key="
-        let apiKey = "a99110355018814a703acb4a4754cd5b"
+        let apiKey = KeychainService.loadKey() as! String
         let query = "&query=" + str
-        let session = URLSession.shared
-        let url = URL(string: (base + apiKey + query))
-        let request = session.dataTask(with: url!, completionHandler: { data, response, error in
-            do {
-                if let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                    self.tableData = jsonData["results"] as! NSArray
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                }
-            } catch {
-                print(error)
+        Alamofire.request((base + apiKey + query)).responseJSON(completionHandler: {
+            response in
+            let JSON = response.result.value  as! NSDictionary
+            self.tableData = JSON["results"] as! NSArray
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         })
-        request.resume()
     }
 }
-
-
-//http://api.themoviedb.org/3/search/movie?api_key=a99110355018814a703acb4a4754cd5b&query=jack+reacher
