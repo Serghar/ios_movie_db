@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="opx-rU-cXc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Ocz-0o-4ky">
+            <objects>
+                <viewController id="opx-rU-cXc" customClass="LoginViewController" customModule="movieRater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sHo-ss-bog"/>
+                        <viewControllerLayoutGuide type="bottom" id="5tI-tJ-tWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NEI-ok-E7z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmn-rS-Igd" customClass="GIDSignInButton">
+                                <rect key="frame" x="36" y="301" width="303" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="BCG-bA-wEz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="SignInButtonPressed:" destination="opx-rU-cXc" eventType="valueChanged" id="tcC-yf-5kL"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rmn-rS-Igd" secondAttribute="trailing" constant="20" id="RXJ-YS-KqU"/>
+                            <constraint firstItem="Rmn-rS-Igd" firstAttribute="centerY" secondItem="NEI-ok-E7z" secondAttribute="centerY" id="RyE-fq-L0D"/>
+                            <constraint firstItem="Rmn-rS-Igd" firstAttribute="centerX" secondItem="NEI-ok-E7z" secondAttribute="centerX" id="l54-Nv-2UG"/>
+                            <constraint firstItem="Rmn-rS-Igd" firstAttribute="leading" secondItem="NEI-ok-E7z" secondAttribute="leadingMargin" constant="20" id="qJR-3z-434"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginSegue" id="2K9-Kv-7uu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7Z-xN-gd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.20000000000005" y="122.78860569715144"/>
+        </scene>
         <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiz-sg-yye" id="3wG-1n-RSC">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p3-VS-Gpn">
@@ -176,7 +215,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="40R-Z4-YkL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d34-m1-xxC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="d34-m1-xxC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

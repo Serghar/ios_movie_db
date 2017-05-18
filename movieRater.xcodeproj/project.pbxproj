@@ -12,6 +12,8 @@
 		FA435652509C18028DBAB1FA /* Pods_movieRaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F87D33431C430B728C4641 /* Pods_movieRaterTests.framework */; };
 		FCB281181ECE0FAA0030728C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */; };
 		FCB2811A1ECE12B40030728C /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB281191ECE12B40030728C /* KeychainService.swift */; };
+		FCB2811C1ECE1DA20030728C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2811B1ECE1DA20030728C /* LoginViewController.swift */; };
+		FCB281201ECE251B0030728C /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2811F1ECE251B0030728C /* SingletonObject.swift */; };
 		FCFDAE3A1ECA302000D65A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDAE391ECA302000D65A4C /* AppDelegate.swift */; };
 		FCFDAE3C1ECA302000D65A4C /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */; };
 		FCFDAE3F1ECA302000D65A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFDAE3D1ECA302000D65A4C /* Main.storyboard */; };
@@ -53,6 +55,9 @@
 		E17A647D117D1147595CE079 /* Pods_movieRater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieRater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCB281191ECE12B40030728C /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		FCB2811B1ECE1DA20030728C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FCB2811D1ECE1F6F0030728C /* movieRater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "movieRater-Bridging-Header.h"; sourceTree = "<group>"; };
+		FCB2811F1ECE251B0030728C /* SingletonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonObject.swift; sourceTree = "<group>"; };
 		FCFDAE361ECA302000D65A4C /* movieRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFDAE391ECA302000D65A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
@@ -147,11 +152,14 @@
 		FCFDAE381ECA302000D65A4C /* movieRater */ = {
 			isa = PBXGroup;
 			children = (
+				FCB2811F1ECE251B0030728C /* SingletonObject.swift */,
 				FCFDAE391ECA302000D65A4C /* AppDelegate.swift */,
+				FCB2811D1ECE1F6F0030728C /* movieRater-Bridging-Header.h */,
 				FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */,
 				FCFDAE6C1ECA523800D65A4C /* MovieDetailsViewController.swift */,
 				FCFDAE6A1ECA4BF900D65A4C /* movieCell.swift */,
 				FCB281191ECE12B40030728C /* KeychainService.swift */,
+				FCB2811B1ECE1DA20030728C /* LoginViewController.swift */,
 				FCFDAE3D1ECA302000D65A4C /* Main.storyboard */,
 				FCFDAE431ECA302000D65A4C /* Assets.xcassets */,
 				FCFDAE451ECA302000D65A4C /* LaunchScreen.storyboard */,
@@ -465,7 +473,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB2811C1ECE1DA20030728C /* LoginViewController.swift in Sources */,
 				FCFDAE6D1ECA523800D65A4C /* MovieDetailsViewController.swift in Sources */,
+				FCB281201ECE251B0030728C /* SingletonObject.swift in Sources */,
 				FCFDAE421ECA302000D65A4C /* movieRater.xcdatamodeld in Sources */,
 				FCFDAE3C1ECA302000D65A4C /* MovieViewController.swift in Sources */,
 				FCFDAE6B1ECA4BF900D65A4C /* movieCell.swift in Sources */,
