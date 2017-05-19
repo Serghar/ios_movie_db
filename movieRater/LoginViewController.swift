@@ -13,14 +13,11 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
-//        GIDSignIn.sharedInstance().signInSilently()
     }
-    
     
     // The sign-in flow has finished selecting how to proceed, and the UI should no longer display
     // a spinner or other "please wait" element.
     public func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-        
     }
     
     @IBAction func SignInButtonPressed(_ sender: GIDSignInButton) {

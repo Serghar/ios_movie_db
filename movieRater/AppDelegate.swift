@@ -26,7 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //        assert(configureError == nil, "Error configuring Google services: \(configureError)")
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-
+        GIDSignIn.sharedInstance().signInSilently()
+        if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieView") as! MovieViewController
+        }
         return true
     }
     
