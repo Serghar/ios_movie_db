@@ -10,10 +10,16 @@
 		6DD59FA1C5C555022D9DE518 /* Pods_movieRaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BAAD9641D0B57EF2426893 /* Pods_movieRaterUITests.framework */; };
 		B6B6DFACD0494D16116E0310 /* Pods_movieRater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17A647D117D1147595CE079 /* Pods_movieRater.framework */; };
 		FA435652509C18028DBAB1FA /* Pods_movieRaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F87D33431C430B728C4641 /* Pods_movieRaterTests.framework */; };
+		FC4B64571ED3622500A86820 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B64561ED3622500A86820 /* HomeViewController.swift */; };
+		FC4B64591ED362D700A86820 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B64581ED362D700A86820 /* UsersViewController.swift */; };
+		FC4B645B1ED3640800A86820 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B645A1ED3640800A86820 /* UserDetailViewController.swift */; };
+		FC4B645E1ED364CE00A86820 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4B645C1ED364CE00A86820 /* Movie.storyboard */; };
+		FC4B64601ED3650700A86820 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4B645F1ED3650700A86820 /* Home.storyboard */; };
+		FC4B64631ED3652100A86820 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4B64611ED3652100A86820 /* Users.storyboard */; };
+		FC4B64681ED3663100A86820 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4B64671ED3663100A86820 /* LoginView.xib */; };
 		FCB281181ECE0FAA0030728C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */; };
 		FCB2811A1ECE12B40030728C /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB281191ECE12B40030728C /* KeychainService.swift */; };
 		FCB2811C1ECE1DA20030728C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2811B1ECE1DA20030728C /* LoginViewController.swift */; };
-		FCB281201ECE251B0030728C /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2811F1ECE251B0030728C /* SingletonObject.swift */; };
 		FCFDAE3A1ECA302000D65A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDAE391ECA302000D65A4C /* AppDelegate.swift */; };
 		FCFDAE3C1ECA302000D65A4C /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */; };
 		FCFDAE3F1ECA302000D65A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFDAE3D1ECA302000D65A4C /* Main.storyboard */; };
@@ -53,11 +59,16 @@
 		A5044F4AC4B39A2F25EC6CE6 /* Pods-movieRater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieRater.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieRater/Pods-movieRater.release.xcconfig"; sourceTree = "<group>"; };
 		AB6597B0E1E9D3947792FC5C /* Pods-movieRaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieRaterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieRaterTests/Pods-movieRaterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E17A647D117D1147595CE079 /* Pods_movieRater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieRater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4B64561ED3622500A86820 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC4B64581ED362D700A86820 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		FC4B645A1ED3640800A86820 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		FC4B645D1ED364CE00A86820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Movie.storyboard; sourceTree = "<group>"; };
+		FC4B645F1ED3650700A86820 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FC4B64621ED3652100A86820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
+		FC4B64671ED3663100A86820 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCB281191ECE12B40030728C /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		FCB2811B1ECE1DA20030728C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FCB2811D1ECE1F6F0030728C /* movieRater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "movieRater-Bridging-Header.h"; sourceTree = "<group>"; };
-		FCB2811F1ECE251B0030728C /* SingletonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonObject.swift; sourceTree = "<group>"; };
 		FCFDAE361ECA302000D65A4C /* movieRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFDAE391ECA302000D65A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +138,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC4B64641ED3658100A86820 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				FC4B64611ED3652100A86820 /* Users.storyboard */,
+				FC4B645A1ED3640800A86820 /* UserDetailViewController.swift */,
+				FC4B64581ED362D700A86820 /* UsersViewController.swift */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		FC4B64651ED3658F00A86820 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC4B645F1ED3650700A86820 /* Home.storyboard */,
+				FC4B64561ED3622500A86820 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		FC4B64661ED365A400A86820 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				FC4B645C1ED364CE00A86820 /* Movie.storyboard */,
+				FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */,
+				FCFDAE6C1ECA523800D65A4C /* MovieDetailsViewController.swift */,
+				FCFDAE6A1ECA4BF900D65A4C /* movieCell.swift */,
+			);
+			name = Movies;
+			sourceTree = "<group>";
+		};
+		FC4B646B1ED36F5B00A86820 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FCB281191ECE12B40030728C /* KeychainService.swift */,
+				FCB2811B1ECE1DA20030728C /* LoginViewController.swift */,
+				FC4B64671ED3663100A86820 /* LoginView.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		FCFDAE2D1ECA301F00D65A4C = {
 			isa = PBXGroup;
 			children = (
@@ -152,15 +203,12 @@
 		FCFDAE381ECA302000D65A4C /* movieRater */ = {
 			isa = PBXGroup;
 			children = (
-				FCB2811F1ECE251B0030728C /* SingletonObject.swift */,
 				FCFDAE391ECA302000D65A4C /* AppDelegate.swift */,
-				FCB2811D1ECE1F6F0030728C /* movieRater-Bridging-Header.h */,
-				FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */,
-				FCFDAE6C1ECA523800D65A4C /* MovieDetailsViewController.swift */,
-				FCFDAE6A1ECA4BF900D65A4C /* movieCell.swift */,
-				FCB281191ECE12B40030728C /* KeychainService.swift */,
-				FCB2811B1ECE1DA20030728C /* LoginViewController.swift */,
 				FCFDAE3D1ECA302000D65A4C /* Main.storyboard */,
+				FC4B646B1ED36F5B00A86820 /* Login */,
+				FC4B64661ED365A400A86820 /* Movies */,
+				FC4B64641ED3658100A86820 /* Users */,
+				FC4B64651ED3658F00A86820 /* Home */,
 				FCFDAE431ECA302000D65A4C /* Assets.xcassets */,
 				FCFDAE451ECA302000D65A4C /* LaunchScreen.storyboard */,
 				FCFDAE481ECA302000D65A4C /* Info.plist */,
@@ -307,8 +355,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4B64631ED3652100A86820 /* Users.storyboard in Resources */,
+				FC4B645E1ED364CE00A86820 /* Movie.storyboard in Resources */,
+				FC4B64681ED3663100A86820 /* LoginView.xib in Resources */,
 				FCFDAE471ECA302000D65A4C /* LaunchScreen.storyboard in Resources */,
 				FCB281181ECE0FAA0030728C /* GoogleService-Info.plist in Resources */,
+				FC4B64601ED3650700A86820 /* Home.storyboard in Resources */,
 				FCFDAE441ECA302000D65A4C /* Assets.xcassets in Resources */,
 				FCFDAE3F1ECA302000D65A4C /* Main.storyboard in Resources */,
 			);
@@ -475,12 +527,14 @@
 			files = (
 				FCB2811C1ECE1DA20030728C /* LoginViewController.swift in Sources */,
 				FCFDAE6D1ECA523800D65A4C /* MovieDetailsViewController.swift in Sources */,
-				FCB281201ECE251B0030728C /* SingletonObject.swift in Sources */,
 				FCFDAE421ECA302000D65A4C /* movieRater.xcdatamodeld in Sources */,
 				FCFDAE3C1ECA302000D65A4C /* MovieViewController.swift in Sources */,
+				FC4B64571ED3622500A86820 /* HomeViewController.swift in Sources */,
 				FCFDAE6B1ECA4BF900D65A4C /* movieCell.swift in Sources */,
+				FC4B64591ED362D700A86820 /* UsersViewController.swift in Sources */,
 				FCFDAE3A1ECA302000D65A4C /* AppDelegate.swift in Sources */,
 				FCB2811A1ECE12B40030728C /* KeychainService.swift in Sources */,
+				FC4B645B1ED3640800A86820 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +570,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FC4B645C1ED364CE00A86820 /* Movie.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4B645D1ED364CE00A86820 /* Base */,
+			);
+			name = Movie.storyboard;
+			sourceTree = "<group>";
+		};
+		FC4B64611ED3652100A86820 /* Users.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4B64621ED3652100A86820 /* Base */,
+			);
+			name = Users.storyboard;
+			sourceTree = "<group>";
+		};
 		FCFDAE3D1ECA302000D65A4C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

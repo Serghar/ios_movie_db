@@ -20,9 +20,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     public func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
     }
     
-    @IBAction func SignInButtonPressed(_ sender: GIDSignInButton) {
-    }
-    
     // If implemented, this method will be invoked when sign in needs to display a view controller.
     // The view controller should be displayed modally (via UIViewController's |presentViewController|
     // method, and not pushed unto a navigation controller's stack.
@@ -36,7 +33,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     // view controller.
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!){
         self.dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "loginSegue", sender: nil)
+        let MainTabView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTab") as! UITabBarController
+        self.present(MainTabView, animated: false, completion: nil)
     }
 
     

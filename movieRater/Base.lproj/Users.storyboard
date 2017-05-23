@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wuQ-ao-gOR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users-->
+        <scene sceneID="EgC-QH-GlG">
+            <objects>
+                <viewController id="wuQ-ao-gOR" customClass="UsersViewController" customModule="movieRater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NkP-L5-inL"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Gp-85-jx4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oIO-hq-VSK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Users" image="pawn_tab" id="bLF-GV-CAT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="4T6-9S-anl" kind="show" id="yAc-Ba-pT4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfg-Ew-ZIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="1659"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="nne-j6-KVN">
+            <objects>
+                <viewController id="4T6-9S-anl" customClass="UserDetailViewController" customModule="movieRater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HpN-Cb-K2k"/>
+                        <viewControllerLayoutGuide type="bottom" id="n84-gs-dic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLW-XP-dob">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjP-qH-agB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="1658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pawn_tab" width="30" height="30"/>
+    </resources>
+</document>
