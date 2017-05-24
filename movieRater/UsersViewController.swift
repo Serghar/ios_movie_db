@@ -12,17 +12,19 @@ import Firebase
 
 class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var ref: FIRDatabaseReference!
-    var users: [NSDictionary]?
+    var users: [NSDictionary] = [NSDictionary]()
     
-    @IBOutlet weak var tableVIew: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userID = FIRAuth.auth()?.currentUser?.uid
+        tableView.dataSource = self
+        tableView.delegate = self
         ref = FIRDatabase.database().reference()
         ref.child("Users").observeSingleEvent(of: .value, with: { (jsonData) in
-            self.users = jsonData.value as? [NSDictionary]
+            self.users = jsonData.value as! [NSDictionary]
+            self.tableView.reloadData()
         })
     }
     
@@ -31,12 +33,12 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users!.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UserCell
-        let user: NSDictionary = users![indexPath.row]
+        let user: NSDictionary = users[indexPath.row]
         cell.userName?.text = user["Name"] as? String
         return cell
     }

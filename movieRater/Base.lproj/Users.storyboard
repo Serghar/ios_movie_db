@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jMM-gr-n8c" id="Zz3-AW-vam">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CokeClassic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7r-GD-ehm">
@@ -78,7 +78,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="8Xg-C4-h6a" id="NdS-fF-H1M"/>
-                        <outlet property="tableVIew" destination="JPp-LC-rsl" id="uQc-dO-4bD"/>
+                        <outlet property="tableView" destination="JPp-LC-rsl" id="kGf-3x-UGw"/>
                         <segue destination="4T6-9S-anl" kind="show" id="yAc-Ba-pT4"/>
                     </connections>
                 </viewController>
