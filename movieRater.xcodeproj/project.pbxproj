@@ -17,6 +17,9 @@
 		FC4B64601ED3650700A86820 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4B645F1ED3650700A86820 /* Home.storyboard */; };
 		FC4B64631ED3652100A86820 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4B64611ED3652100A86820 /* Users.storyboard */; };
 		FC4B64681ED3663100A86820 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4B64671ED3663100A86820 /* LoginView.xib */; };
+		FC4B648B1ED4F65D00A86820 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B648A1ED4F65D00A86820 /* UserCell.swift */; };
+		FC4B648D1ED4FD8300A86820 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B648C1ED4FD8300A86820 /* User.swift */; };
+		FC4B648F1ED4FDD300A86820 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B648E1ED4FDD300A86820 /* Movie.swift */; };
 		FCB281181ECE0FAA0030728C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */; };
 		FCB2811A1ECE12B40030728C /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB281191ECE12B40030728C /* KeychainService.swift */; };
 		FCB2811C1ECE1DA20030728C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2811B1ECE1DA20030728C /* LoginViewController.swift */; };
@@ -66,6 +69,9 @@
 		FC4B645F1ED3650700A86820 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FC4B64621ED3652100A86820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
 		FC4B64671ED3663100A86820 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		FC4B648A1ED4F65D00A86820 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		FC4B648C1ED4FD8300A86820 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC4B648E1ED4FDD300A86820 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FCB281171ECE0FAA0030728C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCB281191ECE12B40030728C /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		FCB2811B1ECE1DA20030728C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				FC4B64611ED3652100A86820 /* Users.storyboard */,
 				FC4B645A1ED3640800A86820 /* UserDetailViewController.swift */,
 				FC4B64581ED362D700A86820 /* UsersViewController.swift */,
+				FC4B648C1ED4FD8300A86820 /* User.swift */,
+				FC4B648A1ED4F65D00A86820 /* UserCell.swift */,
 			);
 			name = Users;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				FCFDAE3B1ECA302000D65A4C /* MovieViewController.swift */,
 				FCFDAE6C1ECA523800D65A4C /* MovieDetailsViewController.swift */,
 				FCFDAE6A1ECA4BF900D65A4C /* movieCell.swift */,
+				FC4B648E1ED4FDD300A86820 /* Movie.swift */,
 			);
 			name = Movies;
 			sourceTree = "<group>";
@@ -533,7 +542,10 @@
 				FCFDAE6B1ECA4BF900D65A4C /* movieCell.swift in Sources */,
 				FC4B64591ED362D700A86820 /* UsersViewController.swift in Sources */,
 				FCFDAE3A1ECA302000D65A4C /* AppDelegate.swift in Sources */,
+				FC4B648F1ED4FDD300A86820 /* Movie.swift in Sources */,
+				FC4B648D1ED4FD8300A86820 /* User.swift in Sources */,
 				FCB2811A1ECE12B40030728C /* KeychainService.swift in Sources */,
+				FC4B648B1ED4F65D00A86820 /* UserCell.swift in Sources */,
 				FC4B645B1ED3640800A86820 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

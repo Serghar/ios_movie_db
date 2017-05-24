@@ -8,6 +8,7 @@ target 'movieRater' do
   # Pods for movieRater
   pod 'Alamofire', '~> 4.4'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'GoogleSignIn' 
   target 'movieRaterTests' do
     inherit! :search_paths

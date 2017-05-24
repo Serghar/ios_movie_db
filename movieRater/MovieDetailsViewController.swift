@@ -8,9 +8,12 @@
 
 import UIKit
 import Alamofire
+import Firebase
 
 class MovieDetailsViewController: UIViewController {
-   
+    var ref: FIRDatabaseReference!
+    
+    
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieDescription: UILabel!
     
@@ -19,6 +22,7 @@ class MovieDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
         self.navigationItem.title = movieData!["title"] as? String
         movieDescription.text = movieData!["overview"] as? String
         GetPosterImage(ForUrl: movieData!["poster_path"] as? String)

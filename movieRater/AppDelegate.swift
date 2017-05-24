@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return true
     }
     
+    
     // The sign-in flow has finished and was successful if |error| is |nil|.
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!){
         if (error == nil) {
