@@ -9,5 +9,5 @@
 import UIKit
 
 class UserDetailViewController: UIViewController {
-    
+    var userData: NSDictionary?
 }

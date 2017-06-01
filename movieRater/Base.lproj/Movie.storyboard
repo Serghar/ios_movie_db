@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,38 +44,13 @@
                                 <rect key="frame" x="16" y="81" width="343" height="517"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" id="wiz-sg-yye" customClass="MovieCell" customModule="movieRater" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IQf-gw-zi6">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiz-sg-yye" id="3wG-1n-RSC">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IQf-gw-zi6" id="S62-S5-CkB">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p3-VS-Gpn">
-                                                    <rect key="frame" x="8" y="11" width="96" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 6.3 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6W-uh-xkv">
-                                                    <rect key="frame" x="256" y="11" width="87" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2p3-VS-Gpn" firstAttribute="top" secondItem="3wG-1n-RSC" secondAttribute="topMargin" constant="3" id="2w2-xc-bhM"/>
-                                                <constraint firstItem="E6W-uh-xkv" firstAttribute="top" secondItem="3wG-1n-RSC" secondAttribute="top" constant="11" id="3t4-ch-Hp5"/>
-                                                <constraint firstAttribute="trailing" secondItem="E6W-uh-xkv" secondAttribute="trailing" id="VGo-ts-YYb"/>
-                                                <constraint firstItem="E6W-uh-xkv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2p3-VS-Gpn" secondAttribute="trailing" constant="10" id="bNg-GP-UwO"/>
-                                                <constraint firstItem="2p3-VS-Gpn" firstAttribute="leading" secondItem="3wG-1n-RSC" secondAttribute="leadingMargin" id="f1R-gG-fUg"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="movieRating" destination="E6W-uh-xkv" id="Tfa-66-3PZ"/>
-                                            <outlet property="movieTitle" destination="2p3-VS-Gpn" id="pv0-x1-Bg5"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -100,7 +76,7 @@
                             <constraint firstItem="WLI-3C-GtD" firstAttribute="leading" secondItem="SOd-rw-mG5" secondAttribute="trailing" constant="8" id="w6s-Yi-t4I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="FV0-fE-jhU"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search Filled-50" id="FV0-fE-jhU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="TC3-D7-tlc" id="egQ-R4-BmO"/>
@@ -112,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="265" y="233"/>
         </scene>
-        <!--Movie Details View Controller-->
+        <!--Movie Title-->
         <scene sceneID="JtL-XO-gcP">
             <objects>
                 <viewController id="nrg-z8-AKy" customClass="MovieDetailsViewController" customModule="movieRater" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,19 +107,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e8x-K1-vXg">
-                                <rect key="frame" x="54" y="398" width="275" height="200"/>
+                                <rect key="frame" x="50" y="153" width="275" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="e8x-K1-vXg" secondAttribute="height" multiplier="11:8" id="K3a-v3-ghH"/>
                                     <constraint firstAttribute="height" constant="200" id="Nyg-VJ-aGU"/>
-                                    <constraint firstAttribute="width" constant="275" id="mru-JH-hL3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-xw-hh3">
-                                <rect key="frame" x="244" y="73" width="115" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="qjr-9i-Vtq"/>
-                                </constraints>
-                                <state key="normal" title="Add To Favorites"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Text Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-Is-cdF">
                                 <rect key="frame" x="16" y="112" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -153,26 +122,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="e8x-K1-vXg" firstAttribute="centerX" secondItem="i7p-Rp-VY0" secondAttribute="centerX" id="1LJ-yJ-qdT"/>
                             <constraint firstItem="fmh-Is-cdF" firstAttribute="top" secondItem="xJS-nw-V84" secondAttribute="bottom" constant="5.5" id="3U6-bb-i3E"/>
                             <constraint firstItem="xJS-nw-V84" firstAttribute="leading" secondItem="i7p-Rp-VY0" secondAttribute="leadingMargin" id="8xz-SR-EcQ"/>
                             <constraint firstItem="fmh-Is-cdF" firstAttribute="trailing" secondItem="i7p-Rp-VY0" secondAttribute="trailingMargin" id="BDq-Zo-as8"/>
                             <constraint firstItem="xJS-nw-V84" firstAttribute="trailing" secondItem="i7p-Rp-VY0" secondAttribute="trailingMargin" id="JiV-i3-s8b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="e8x-K1-vXg" secondAttribute="trailing" constant="30" id="bg7-7o-cP3"/>
-                            <constraint firstItem="cge-xw-hh3" firstAttribute="top" secondItem="3BI-wY-hkJ" secondAttribute="bottom" constant="9" id="ctI-kb-zdB"/>
-                            <constraint firstItem="66e-5N-sbi" firstAttribute="top" secondItem="e8x-K1-vXg" secondAttribute="bottom" constant="20" id="fSb-Ni-EOx"/>
+                            <constraint firstItem="e8x-K1-vXg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i7p-Rp-VY0" secondAttribute="leadingMargin" constant="8" id="afr-Ux-GBx"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="e8x-K1-vXg" secondAttribute="trailing" constant="8" id="bg7-7o-cP3"/>
+                            <constraint firstItem="66e-5N-sbi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e8x-K1-vXg" secondAttribute="bottom" constant="20" id="fSb-Ni-EOx"/>
                             <constraint firstItem="xJS-nw-V84" firstAttribute="top" secondItem="3BI-wY-hkJ" secondAttribute="bottom" constant="8" id="kGm-bV-sat"/>
-                            <constraint firstItem="cge-xw-hh3" firstAttribute="trailing" secondItem="i7p-Rp-VY0" secondAttribute="trailingMargin" id="lTV-vi-42X"/>
-                            <constraint firstItem="cge-xw-hh3" firstAttribute="leading" secondItem="xJS-nw-V84" secondAttribute="trailing" constant="-115" id="qa4-pv-rKd"/>
-                            <constraint firstItem="e8x-K1-vXg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fmh-Is-cdF" secondAttribute="bottom" constant="20" id="uoX-ox-1Ms"/>
+                            <constraint firstItem="e8x-K1-vXg" firstAttribute="top" secondItem="fmh-Is-cdF" secondAttribute="bottom" constant="20" id="uoX-ox-1Ms"/>
                             <constraint firstItem="fmh-Is-cdF" firstAttribute="leading" secondItem="i7p-Rp-VY0" secondAttribute="leadingMargin" id="xaK-eo-IC7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DFe-qw-7CG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="r16-CT-zA0">
+                    <navigationItem key="navigationItem" title="Movie Title" id="DFe-qw-7CG">
+                        <barButtonItem key="leftBarButtonItem" image="Back-64" id="r16-CT-zA0">
                             <connections>
                                 <action selector="backButtonPressed:" destination="nrg-z8-AKy" id="8j8-DL-4tc"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Plus-64" id="9dl-Xw-xLj"/>
                     </navigationItem>
                     <connections>
                         <outlet property="movieDescription" destination="fmh-Is-cdF" id="Yys-Cq-fRN"/>
@@ -191,6 +160,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="d34-m1-xxC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -202,4 +174,9 @@
             <point key="canvasLocation" x="1105" y="233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Back-64" width="50" height="50"/>
+        <image name="Plus-64" width="50" height="50"/>
+        <image name="Search Filled-50" width="30" height="30"/>
+    </resources>
 </document>

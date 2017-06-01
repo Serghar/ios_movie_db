@@ -36,7 +36,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if (error == nil) {
             let credentials = FIRGoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
             FIRAuth.auth()?.signIn(with: credentials, completion: {(user, error) in
-                //...
+                let ref = FIRDatabase.database().reference()
+                //Refactor to look for only one user
+                ref.child("Users").observeSingleEvent(of: .value, with: { (jsonData) in
+                    if (!jsonData.hasChild(user!.uid)) {
+                        let users = jsonData.value as! NSDictionary
+                        if users[user!.uid] == nil {
+                            ref.child("Users").setValue(user!.uid)
+                            var defaultData: [String: Any] = [String:Any]()
+                            defaultData["Lists"] = [["Name":"Favorite", "Movies": []]]
+                            defaultData["Name"] = "Unknown"
+                            
+                            ref.child("Users").child((user!.uid)).setValue(defaultData)
+                        } else {
+                            //pull data to cache to coredata
+                        }
+                    }
+                })
+
             })
         } else {
             print("\(error.localizedDescription)")

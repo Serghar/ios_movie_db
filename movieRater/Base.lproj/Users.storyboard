@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jMM-gr-n8c" id="Zz3-AW-vam">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CokeClassic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7r-GD-ehm">
@@ -69,7 +69,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Discover Users" id="2Dp-A5-uws">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Dec-IO-evP">
+                        <barButtonItem key="rightBarButtonItem" image="Contact Card-64" id="Dec-IO-evP">
                             <connections>
                                 <action selector="ProfileButtonPressed:" destination="wuQ-ao-gOR" id="M02-5V-Hus"/>
                             </connections>
@@ -79,12 +79,31 @@
                     <connections>
                         <outlet property="searchBar" destination="8Xg-C4-h6a" id="NdS-fF-H1M"/>
                         <outlet property="tableView" destination="JPp-LC-rsl" id="kGf-3x-UGw"/>
-                        <segue destination="4T6-9S-anl" kind="show" id="yAc-Ba-pT4"/>
+                        <segue destination="4T6-9S-anl" kind="show" identifier="userDetails" id="yAc-Ba-pT4"/>
+                        <segue destination="5P4-Kl-fpd" kind="show" identifier="profile" id="kPF-sj-bHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfg-Ew-ZIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="1658.3208395802101"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Q8l-J9-OBk">
+            <objects>
+                <viewController id="5P4-Kl-fpd" customClass="ProfileViewController" customModule="movieRater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bTv-Ss-7ql"/>
+                        <viewControllerLayoutGuide type="bottom" id="u65-jY-UDw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="noS-G3-UlD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKw-Pb-Eh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="1302"/>
         </scene>
         <!--User Detail View Controller-->
         <scene sceneID="nne-j6-KVN">
@@ -102,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjP-qH-agB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="1657.4212893553224"/>
+            <point key="canvasLocation" x="935" y="1963"/>
         </scene>
         <!--Users-->
         <scene sceneID="2ge-cM-TPi">
@@ -113,6 +132,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5NO-xx-K0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -125,6 +147,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Contact Card-64" width="50" height="50"/>
         <image name="pawn_tab" width="30" height="30"/>
     </resources>
 </document>

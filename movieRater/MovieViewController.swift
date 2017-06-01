@@ -12,7 +12,7 @@ import Alamofire
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
-    var tableData: NSArray = NSArray()
+    var tableData: [Any] = []
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         if(textField.text != "") {
@@ -30,7 +30,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
         let movieInfo = tableData[indexPath.row] as! NSDictionary
         cell.movieTitle.text = movieInfo["title"] as? String
-        cell.movieRating.text = "Rating: \(movieInfo["vote_average"]!)"
+        cell.movieRating.text = "\(movieInfo["vote_average"]!)"
         return cell
     }
     
@@ -51,6 +51,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: "movieCell", bundle: Bundle.main), forCellReuseIdentifier: "movieCell")
     }
     
     private func SearchMovieDb(ForTitle str: String) {
@@ -60,7 +61,10 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         Alamofire.request((base + apiKey + query)).responseJSON(completionHandler: {
             response in
             let JSON = response.result.value  as! NSDictionary
-            self.tableData = JSON["results"] as! NSArray
+            let results = JSON["results"] as! Array<[String: Any]>
+            let langs = ["en","ja"] //To be refactored to languages checkbox
+            let filteredArr = results.filter { (langs.contains($0["original_language"] as! String)) && ($0["vote_count"] as! Int > 25) }
+            self.tableData = filteredArr
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

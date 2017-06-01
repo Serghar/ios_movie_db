@@ -28,8 +28,24 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "userDetails", sender: indexPath)
+    }
+    
     
     @IBAction func ProfileButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "profile", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "userDetails") {
+            let indexPath = sender as! IndexPath
+            let destination = segue.destination as! UserDetailViewController
+            destination.userData = users[indexPath.row]
+        }
+        if(segue.identifier == "profile") {
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

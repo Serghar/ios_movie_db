@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="7is-wt-CGt"/>
+                    <tabBarItem key="tabBarItem" title="News" image="Google News Filled-50" id="7is-wt-CGt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZT2-yY-Tr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,4 +30,7 @@
             <point key="canvasLocation" x="266" y="952"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Google News Filled-50" width="30" height="30"/>
+    </resources>
 </document>
